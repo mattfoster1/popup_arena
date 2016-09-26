@@ -1,0 +1,57 @@
+@mixin flex_center {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+}
+
+@mixin flex-plain {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+}
+
+@mixin trigger_fade {
+    // -webkit-transition: border-color 1s ease, color 1s ease;
+    // -moz-transition:    border-color 1s ease, color 1s ease;
+    // -o-transition:      border-color 1s ease, color 1s ease;
+    // transition:         border-color 1s ease, color 1s ease;
+
+    -webkit-transition: opacity .8s ease;
+    -moz-transition:    opacity .8s ease;
+    -o-transition:      opacity .8s ease;
+    transition:         opacity .8s ease;
+}
+
+@mixin trans_all_1s {
+    -webkit-transition: all 1s ease;
+    -moz-transition:    all 1s ease;
+    -o-transition:      all 1s ease;
+    transition:         all 1s ease;
+}
+
+@mixin popup_params {
+    position: absolute;
+    background-size: 100%;
+    // border: solid 1px black;
+}
+
+@mixin height_pop0 {
+    -webkit-transition: all .5s;
+    -moz-transition:    all .5s;
+    -o-transition:      all .5s;
+    transition:         all .5s;
+}
+
+@mixin height_pop1 {
+    -webkit-transition: all .2s ease-out;
+    -moz-transition:    all .2s ease-out;
+    -o-transition:      all .2s ease-out;
+    transition:         all .2s ease-out;
+}

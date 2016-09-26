@@ -1,0 +1,39 @@
+@keyframes trigger_pulse {
+	10% {
+		color: gray;
+		border-color: gray;
+	}
+	20% {
+		color: rgb(170,170,170);
+		border-color: rgb(170,170,170);
+
+	}
+	30% {
+		color: rgb(120,120,120);
+		border-color: rgb(120,120,120);
+	}
+	40% {
+		color: rgb(170,170,170);
+		border-color: rgb(170,170,170);
+	}
+	50%, 60% {
+		color: gray;
+		border-color: gray;
+	}
+	70% {
+		color: rgb(170,170,170);
+		border-color: rgb(170,170,170);
+	}
+	80% {
+		color: rgb(120,120,120);
+		border-color: rgb(120,120,120);
+	}
+	90% {
+		color: rgb(170,170,170);
+		border-color: rgb(170,170,170);
+	}
+	100% {
+		color: gray;
+		border-color: gray;
+	}
+}

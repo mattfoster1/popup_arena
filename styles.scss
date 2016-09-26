@@ -1,0 +1,182 @@
+@import '_animations.scss';
+@import '_mixins.scss';
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body, html {
+	position: absolute;
+	font-family: pavanam;
+	font-size: 32px;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+}
+
+#headerCont, #footerCont {
+	opacity: 0.3;
+}
+
+#main_cont {
+	position: absolute;
+	height: -webkit-calc(100% - 150px);
+    height:    -moz-calc(100% - 150px);
+    height:         calc(100% - 150px);
+	width: 100%;
+	margin: 100px 0 0px 0px;
+	@include flex_center;
+	
+	.popup0 {
+		top: 11%;
+		left: 3%;
+		width: 295px;
+		color: white;
+		font-size: 30px;
+		background: url("images/chalk1.jpg") center no-repeat;
+		
+		@include popup_params;
+		@include flex_center;
+		@include height_pop0;
+
+		&.closed { height: 0px; }
+
+		&.open {
+			height: 236px;
+			margin: -120px 0px 0px 0px;
+		}
+	}
+
+	.popup1 {
+		background: url("images/flowers.jpg") center no-repeat;
+		bottom: 40%;
+		left: 45%;
+		width: 0px;
+		color: black;
+
+		@include popup_params;
+		@include flex_center;
+		@include height_pop1;
+
+		&.closed { height: 0px; }
+
+		&.open {
+			height: 375px;
+			width: 500px;
+			margin: 0px 0px -180px -250px;
+		}
+	}
+
+	.popup2 {	
+		background: url("images/premium.png") center no-repeat;
+		bottom: 28%;
+		right: 27%;
+		width: 295px;
+
+		@include popup_params;
+		@include flex_center;
+		@include height_pop0;
+
+		&.closed { height: 0px; }
+
+		&.open {
+			height: 286px;
+			margin: 0px 0px -183px 0px;
+		}
+	}
+
+	.popup3 {
+		background: url("images/guaranteed.png") center no-repeat;
+		right: 8%;
+		top: 29%;
+		width: 350px;
+
+		@include popup_params;
+		@include height_pop0;
+
+		&.closed { height: 0px; }
+
+		&.open {
+			height: 308px;
+			margin: -200px 0px 0px 0px;
+		}
+	}
+
+	.popup4 {
+		background: url("images/sunburst-design.jpg") center no-repeat;
+		left: 18%;
+		bottom: 31%;
+		width: 0px;
+
+		@include popup_params;
+		@include height_pop0;
+
+		&.closed { height: 0px; }
+
+		&.open {
+			height: 308px;
+			width: 350px;
+			margin: 0px 0px -200px -175px;
+		}
+	}
+
+	.flash0 {
+		position: absolute;
+		opacity: 0;
+	}
+
+	#exclam {
+		position: absolute;
+		font-size: 150px;
+		
+		left: 47.5%;
+		width: 5%;
+		@include flex_center;
+	}
+
+	.exclam_in {
+		top: -250px;
+	    -webkit-transition: all .5s ease;
+	    -moz-transition:    all .5s ease;
+	    -o-transition:      all .5s ease;
+	    transition:         all .5s ease;
+	}
+
+	.exclam_out {
+		-webkit-transition: all 1.5s ease;
+	    -moz-transition:    all 1.5s ease;
+	    -o-transition:      all 1.5s ease;
+	    transition:         all 1.5s ease;
+
+	    top: 0px;
+	}
+
+	.trigger {
+		color: gray;
+		border: 3px solid gray;
+		border-radius: 100%;
+		width: 125px;
+		height: 125px;
+		-webkit-animation: trigger_pulse 15s infinite;
+  		-moz-animation:    trigger_pulse 15s infinite;
+  		-o-animation:      trigger_pulse 15s infinite;
+  		animation:         trigger_pulse 15s infinite;
+		@include flex_center;
+		@include trigger_fade;
+
+		div {
+			font-size: 170px;
+			height: 100%;
+			width: 100%;
+			margin-top: 14px;
+			-webkit-animation: trigger_pulse 15s infinite;
+	  		-moz-animation:    trigger_pulse 15s infinite;
+	  		-o-animation:      trigger_pulse 15s infinite;
+	  		animation:         trigger_pulse 15s infinite;
+	  		@include flex_center;
+	  		@include trigger_fade;
+		}
+	}
+}
